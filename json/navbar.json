@@ -1,0 +1,9 @@
+{
+  "title" : "BE Software Studio",
+  "buttons" : [
+    {
+      "label" : "About",
+      "href" : "#"
+    }
+  ]
+}
