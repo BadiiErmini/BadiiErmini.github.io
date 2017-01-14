@@ -3,7 +3,16 @@
   "buttons" : [
     {
       "label" : "About",
-      "href" : "#"
+      "href" : "#about"
+    },{
+      "label" : "Services",
+      "href" : "#services"
+    },{
+      "label" : "Portfolio",
+      "href" : "#portfolio"
+    },{
+      "label" : "Contact",
+      "href" : "#contact"
     }
   ]
 }
