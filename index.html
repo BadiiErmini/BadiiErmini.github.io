@@ -33,18 +33,7 @@
 
     <![endif]-->
 
-    <script src="js/Mustache.js" type="text/javascript"></script>
-    <script src="js/ViewManager.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        $.ajax({
-            url: "json/navbar.json",
-            async: false,
-            dataType:"json",
-            success: function(data){
-                ViewManager.render(data,"#mainNav", navbar);
-            }
-        })
-    </script>
+
 
 </head>
 
@@ -249,6 +238,18 @@
 
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
+    <script src="js/Mustache.js" type="text/javascript"></script>
+    <script src="js/ViewManager.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $.ajax({
+            url: "json/navbar.json",
+            async: false,
+            dataType:"json",
+            success: function(data){
+                ViewManager.render(data,"#mainNav", navbar);
+            }
+        })
+    </script>
 
 </body>
 
