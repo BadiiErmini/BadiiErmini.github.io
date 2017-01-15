@@ -47,7 +47,7 @@
             <div class="header-content-inner">
                 <h1 id="homeHeading">Soluzioni Software su misura</h1>
                 <hr>
-                <p>Costruiamo insieme a te la soluzione adatta a far crescere la tua impresa</p>
+                <p id="cani">Costruiamo insieme a te la soluzione adatta a far crescere la tua impresa</p>
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
             </div>
         </div>
@@ -242,11 +242,12 @@
     <script src="js/ViewManager.js" type="text/javascript"></script>
     <script type="text/javascript">
         $.ajax({
-        	url: "services/getLayout.php",
+        	url: "services/getLayout.php?layout=navbar",
             async: false,
-            dataType:"json",
+            dataType:"text",
             success: function(data){
-                ViewManager.render(data,"#mainNav", "navbar");
+            	ViewManager.render(JSON.parse(data),"#mainNav", "navbar");
+                
             }
         })
     </script>
