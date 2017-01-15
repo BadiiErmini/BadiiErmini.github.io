@@ -244,9 +244,9 @@
         $.ajax({
         	url: "services/getLayout.php?layout=navbar",
             async: false,
-            dataType:"json",
+            dataType:"text",
             success: function(data){
-                ViewManager.render(data,"#mainNav", "navbar");
+                ViewManager.render(JSON.parse(data),"#mainNav", "navbar");
             }
         })
     </script>
