@@ -1,9 +1,14 @@
 {
-  "title" : "BE Software Studio",
+  "title" : [
+    {
+  	"label" : "BE Software Studio",
+  	"href" : "#page-top"
+    }
+  ],
   "buttons" : [
     {
       "label" : "About",
-      "href" : "services/navbar.php"
+      "href" : "services/getLayout.php?layout=navbar"
     },{
       "label" : "Services",
       "href" : "#services"
