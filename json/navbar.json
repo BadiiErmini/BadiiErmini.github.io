@@ -3,7 +3,7 @@
   "buttons" : [
     {
       "label" : "About",
-      "href" : "/services/navbar.php"
+      "href" : "services/navbar.php"
     },{
       "label" : "Services",
       "href" : "#services"
