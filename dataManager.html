@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="dataManager">
+
+<head>
+	
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="besoftwarestudio">
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="js/dataManager.js"></script>
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+</head>
+<body >
+	<h1>Layout element</h1>
+ 	<div ng-controller="layoutController">
+		<ul ng-repeat="layout in layouts">
+     		<li>{{layout.name}}</li>
+    	</ul>
+  	</div>
+</body>
