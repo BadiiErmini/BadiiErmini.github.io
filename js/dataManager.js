@@ -11,7 +11,7 @@ app.controller('layoutController', function($scope, $http) {
 app.controller('structureController',function($scope, $http) {
 	$scope.init = function($id){
 		$scope.id = $id;
-		$http.get("services/dm_getstructure.php?id="+$scope.id)
+		$http.get("services/dm_getStructure.php?id="+$scope.id)
 		.then(function (response) {$scope.structure = response.data;});
 	};
 });
