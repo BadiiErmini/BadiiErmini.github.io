@@ -23,24 +23,42 @@
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
 </head>
-<body >
-	<h1>Layout element</h1>
-	 	<div ng-controller="layoutController">
-				<ul class="nav nav-pills" role="tablist" display="inline">
-					<li role="presentation" ng-repeat="layout in layouts">
-						<a data-toggle="collapse" href="#{{layout.id}}" aria-expanded="false" aria-controls="collapseExample" onclick="$('.in').collapse('toggle')">{{layout.name}}</a>
-					</li>
-				</ul>
-	  	</div>
-  	<div ng-controller="layoutController">
-	  	<div ng-repeat="layout in layouts">
-			<div class="collapse" id="{{layout.id}}">
-				<div class="well">
-					{{layout.name}}
-					<button class="btn btn-primary btn-sm" ng-click="toggle(layout.id)" role="button" >close</button>
+<body class="container-fluid">
+	<p><h1>Database Manager</h1></p>
+	<div id="mainContainer">
+		<ul class="nav nav-tabs">
+    		<li class="active"><a data-toggle="tab" href="#layoutStructure">Layout Structure</a></li>
+    		<li><a data-toggle="tab" href="#content">Content</a></li>
+	  	</ul>
+	  	<div class="tab-content">
+			<div id="layoutStructure" class="tab-pane fade in active">
+				<div ng-controller="layoutController" style="margin-bottom:12px;">
+					<ul class="nav nav-pills" role="tablist" display="inline">
+						<li role="presentation" ng-repeat="layout in layouts">
+							<a data-toggle="collapse" href="#{{layout.id}}" aria-expanded="true" aria-controls="collapseExample" >{{layout.name}}</a>
+						</li>
+					</ul>
+		  		</div>
+		  		<div ng-controller="layoutController">
+				  	<div ng-repeat="layout in layouts">
+						<div class="collapse" id="{{layout.id}}">
+							<div class="well">
+								<div ng-controller="structureController" ng-init="init(layout.id)">
+									<div ng-repeat="struct in structure">
+										--{{struct.field}} 
+										<p ng-repeat="attribute in struct.attributes"> {{attribute}} </p>
+									</div>
+									<button type="button" class="btn-xs btn-danger btn" ng-click="toggle(layout.id)" role="button" >close</button>
+								</div>
+								
+							</div>
+						</div>
+					</div>
 				</div>
-			</div>
+			</div> <!-- close layout page -->
+			<div id="content" class="tab-pane fade">
+			contenuti
+			</div> <!--  close content page -->
 		</div>
 	</div>
-	
 </body>
